@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Home - DocOCR{% endblock %}
+
+{% block content %}
+<h1>Welcome to DocOCR</h1>
+<p>Quickly upload Aadhaar images to detect blur and extract name & Aadhaar number.</p>
+
+{% if not session.get('user') %}
+	<p><a class="btn" href="{{ url_for('auth.login') }}">Login as admin</a></p>
+{% else %}
+	<p><a class="btn" href="{{ url_for('upload') }}">Go to Upload</a></p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Results - DocOCR{% endblock %}
+{% block content %}
+<h2>Results</h2>
+{% if docs %}
+<table class="results">
+    <thead>
+        <tr>
+            <th>Filename</th>
+            <th>Blur</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Aadhaar</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for d in docs %}
+        <tr>
+            <td>{{ d.filename }}</td>
+            <td>{{ 'Yes' if d.is_blur else 'No' }}</td>
+            <td>{{ d.name or '' }}</td>
+            <td>{{ d.dob or '' }}</td>
+            <td>{{ d.aadhaar or '' }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No documents uploaded yet.</p>
+{% endif %}
+{% endblock %}

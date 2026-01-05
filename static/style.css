@@ -1,0 +1,103 @@
+/* Simple and readable CSS for beginners.
+   Not optimized — written clearly so you can learn from it. */
+
+/* Page background and base font */
+body {
+  background-color: #f6f8fa; /* light gray background */
+  color: #222222;            /* dark text for readability */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;                 /* remove default page margin */
+  padding: 0;
+}
+
+/* Top navigation bar */
+.nav {
+  background-color: #ffffff; /* white nav bar */
+  border-bottom: 1px solid #e6e9ef;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand on left */
+.nav .brand {
+  font-weight: bold;
+  color: #2b6cb0; /* blue color */
+  text-decoration: none;
+}
+
+/* Links on the right */
+.nav-links a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: #333333;
+}
+
+/* Container that centers page content */
+.container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 12px;
+}
+
+/* Simple card used for forms */
+.form {
+  background-color: #ffffff;
+  border: 1px solid #e6e9ef;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+/* Labels and inputs */
+.form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #2b6cb0;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Error messages */
+.error {
+  color: #c00;
+  margin-top: 8px;
+}
+
+/* Results table */
+.results {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  background-color: #fff;
+  border: 1px solid #e6e9ef;
+}
+
+.results th, .results td {
+  padding: 8px;
+  border: 1px solid #f1f3f5;
+  text-align: left;
+}
+
+/* Small helper text (username, etc) */
+.user {
+  margin-left: 8px;
+  color: #666666;
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Login - DocOCR{% endblock %}
+{% block content %}
+<h2>Login</h2>
+<form method="post" class="form">
+    <label>Username
+        <input name="username" placeholder="Username" required>
+    </label>
+    <label>Password
+        <input name="password" type="password" placeholder="Password" required>
+    </label>
+    <button type="submit" class="btn">Login</button>
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+</form>
+<p>Hint: username <strong>admin</strong> and password <strong>password</strong></p>
+{% endblock %}
