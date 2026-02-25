@@ -31,6 +31,7 @@ def extract_data(image_path):
     """Extract Name, DOB, Aadhaar from Aadhaar card."""
 
     image = cv2.imread(image_path)
+    #image
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     denoised = cv2.fastNlMeansDenoising(gray, None, 10, 7, 21)
